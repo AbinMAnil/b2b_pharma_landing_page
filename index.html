@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDPRO Healthcare Solutions | UAE Pharmacy Growth Partners</title>
+    <meta name="description" content="Empowering UAE Pharmacies for Sustainable Growth through strategic compliance, procurement, talent, and e-commerce solutions.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">MED<span>PRO</span></div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div id="progress-text" class="progress-text">0%</div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div id="particles-container"></div>
+    <div class="bg-gradient-glow"></div>
+
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo-side">
+                <div class="logo">MEDPRO & Co.</div>
+            </div>
+            
+            <!-- Desktop Links -->
+            <div class="nav-center-side desktop-only">
+                <div class="nav-links-pill">
+                    <a href="#">Home</a>
+                    <a href="#methodology">Methodology</a>
+                    <a href="#founder">Founder</a>
+                    <a href="#strategy">Strategy</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="nav-cta-side">
+                <!-- Removed WhatsApp buttons from Nav -->
+                <a href="#contact" class="btn-pill-dark desktop-only">Get in Touch</a>
+
+                <!-- Hamburger Menu Toggle -->
+                <button id="menu-toggle" class="hamburger-btn mobile-only">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="mobile-nav-drawer glass-drawer">
+        <div class="drawer-header">
+            <div class="logo">MEDPRO</div>
+            <button id="close-menu" class="close-btn">&times;</button>
+        </div>
+        <div class="drawer-links">
+            <a href="#" class="drawer-link"><span class="icon">🏠</span> Home</a>
+            <a href="#methodology" class="drawer-link"><span class="icon">🏛️</span> Methodology</a>
+            <a href="#founder" class="drawer-link"><span class="icon">👤</span> Founder</a>
+            <a href="#strategy" class="drawer-link"><span class="icon">📊</span> Strategy</a>
+            <a href="#contact" class="drawer-link"><span class="icon">✉️</span> Contact</a>
+        </div>
+        <div class="drawer-footer">
+            <a href="#contact" class="btn-pill-dark full-width">Get in Touch</a>
+        </div>
+    </div>
+
+    <!-- Canvas Container (Hero Sequence) -->
+    <div class="canvas-container">
+        <canvas id="sequence-canvas"></canvas>
+    </div>
+
+    <!-- Main Scroll Content -->
+    <main class="scroll-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- <div class="hero-eyebrow-pill reveal-up">
+                    <span class="emoji">✨</span> Empowering UAE Pharmacies for Sustainable Growth
+                </div> -->
+                <h1 class="hero-title slide-from-top">Empowering <em>UAE Pharmacies</em> for sustainable growth.</h1>
+                <p class="hero-subtitle reveal-up">Your Strategic Partner for Compliance, Procurement, Talent, and E-commerce Domination.</p>
+                
+                <div class="hero-btns-group reveal-up">
+                    <a href="#contact" class="btn-pill-dark">Get in Touch</a>
+                    <a href="#methodology" class="btn-text-link">Explore Solutions <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"><div class="wheel"></div></div>
+                <span>Experience the Future</span>
+            </div>
+        </section>
+
+        <!-- Scroll Depth Spacer -->
+        <div class="scroll-spacer"></div>
+
+        <!-- Section 2: Methodology System (3D Circular Carousel) -->
+        <section id="methodology" class="methodology-system">
+            <div class="methodology-container">
+                <header class="section-intro">
+                    <h2 class="section-title slide-from-top">Our Core Methodology</h2>
+                </header>
+
+                <div class="carousel-wrapper">
+                    <div class="circular-path"></div>
+                    <div class="carousel-cards-container">
+                        <!-- Card 1 -->
+                        <div class="m-card item-1" data-index="1">
+                            <div class="m-card-inner">
+                                <div class="m-icon-box">
+                                    <img src="assets/setup_startegy.png" class="floating-3d-icon" alt="Strategy Icon">
+                                </div>
+                                <h3>Setup Strategy</h3>
+                                <p>End-to-end operational framework development for new clinical facilities and laboratory systems.</p>
+                                <ul class="m-details-list">
+                                    <li>MOH/DHA/DOH Licensing Strategy</li>
+                                    <li>Facility Design & Workflow Protocols</li>
+                                    <li>Initial Operational Setup & Governance</li>
+                                </ul>
+                                <a href="#" class="m-learn-more">Explore Setup Guide <span>→</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="m-card item-2" data-index="2">
+                            <div class="m-card-inner">
+                                <div class="m-icon-box">
+                                    <img src="assets/quality_control.png" class="floating-3d-icon" alt="Quality Icon">
+                                </div>
+                                <h3>Expert Quality Control</h3>
+                                <p>Implementing rigorous diagnostic standards and regulatory compliance monitoring frameworks.</p>
+                                <ul class="m-details-list">
+                                    <li>Audit Readiness & Risk Mitigation</li>
+                                    <li>Standard Operating Procedures (SOPs)</li>
+                                    <li>Ongoing Compliance Monitoring</li>
+                                </ul>
+                                <a href="#" class="m-learn-more">Audit Solutions <span>→</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="m-card item-3" data-index="3">
+                            <div class="m-card-inner">
+                                <div class="m-icon-box">
+                                    <img src="assets/talent_acquisition.png" class="floating-3d-icon" alt="Talent Icon">
+                                </div>
+                                <h3>Talent Acquisition</h3>
+                                <p>Precision headhunting for licensed specialists and executive leadership in the Gulf region.</p>
+                                <ul class="m-details-list">
+                                    <li>Pharmacy Manager Recruitment</li>
+                                    <li>Licensed Pharmacist Sourcing</li>
+                                    <li>Corporate Leadership Training</li>
+                                </ul>
+                                <a href="#" class="m-learn-more">Hire Specialists <span>→</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="m-card item-4" data-index="4">
+                            <div class="m-card-inner">
+                                <div class="m-icon-box">
+                                    <img src="assets/digital_commerce.png" class="floating-3d-icon" alt="Digital Icon">
+                                </div>
+                                <h3>Digital Commerce</h3>
+                                <p>Full-spectrum pharmacy e-commerce architecture tailored for high-conversion pharmaceutical retail.</p>
+                                <ul class="m-details-list">
+                                    <li>Keyword & SEO Optimization</li>
+                                    <li>Supply Chain Logistics Integration</li>
+                                    <li>Dynamic Pricing & Growth Analytics</li>
+                                </ul>
+                                <a href="#" class="m-learn-more">Growth Roadmap <span>→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Founder's Message (Editorial) -->
+        <section id="founder" class="founders-message">
+            <div class="container editorial-layout">
+                <div class="founder-portrait slide-from-left">
+                    <!-- Note: Replace with actual image path if available -->
+                    <img src="assets/founder.jpeg" alt="Vaisakh - Founder of MEDPRO">
+                    <div class="founder-label">
+                        <h4>Vaisakh</h4>
+                        <span>Founder & Consultant</span>
+                    </div>
+                </div>
+                <div class="founder-text reveal-up">
+                    <h2 class="editorial-title">A Personal Commitment to Your Success</h2>
+                    <div class="letter-content">
+                        <p class="drop-cap">Our goal is to empower small and medium-scale pharmacy businesses to scale sustainably and compete with confidence in an increasingly challenging and dynamic market. </p>
+                        <p>Today’s pharmacy sector is under significant pressure—from limited purchasing capacity and rising operational costs to complex healthcare regulations and intense competition from large, established chains.</p>
+                        <p>At MEDPRO, we bridge this gap. We provide the expertise, tools, and strategic insights traditionally reserved for industry giants, making them accessible to growing pharmacy networks across the UAE.</p>
+                        <div class="signature">
+                            <span class="sign-name">Vaisakh</span>
+                            <span class="sign-title">Chief Executive Officer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Modern Feature Showcase -->
+        <section id="strategy" class="feature-showcase">
+            <div class="container showcase-grid">
+                <!-- Row 1 -->
+                <div class="showcase-item reveal-item">
+                    <div class="showcase-image">
+                        <img src="assets/engagement.png" alt="Engagement">
+                        <div class="image-stat-bubble top-stat">
+                            <div class="stat-circle">39%</div>
+                            <div class="stat-text">Significantly exceeded business goals</div>
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <span class="category-pill">Engagement</span>
+                        <h2 class="showcase-title">Empowering pharmacy voices at scale.</h2>
+                        <p>We listen, reflect, and respond to operational feedback to retain top talent as your pharmacy network grows, ensuring every voice matters.</p>
+                        <ul class="check-list">
+                            <li>Organize your core team</li>
+                            <li>Work with any pharmacy unit</li>
+                            <li>Real-time business analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="showcase-item reverse reveal-item">
+                    <div class="showcase-content">
+                        <span class="category-pill">Performance</span>
+                        <h2 class="showcase-title">Strategic growth management you'll love.</h2>
+                        <p>Identify your top performers and scale every location with confidence. Our analytics-driven approach turns raw data into actionable retail strategy.</p>
+                        <div class="stat-row">
+                            <div class="mini-stat">
+                                <span class="val">1.8x</span>
+                                <span class="lbl">User base growth</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="val">22%</span>
+                                <span class="lbl">Increase in retention</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-image">
+                        <img src="assets/performance.png" alt="Performance">
+                        <div class="image-stat-bubble bottom-stat">
+                            <div class="stat-label">Stock Accuracy</div>
+                            <div class="stat-value">99.8%</div>
+                            <div class="mini-chart">
+                                <div class="bar" style="height: 40%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 50%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="showcase-item reveal-item">
+                    <div class="showcase-image">
+                        <img src="assets/goals.png" alt="Goals & Organization">
+                        <div class="image-stat-bubble top-stat right-bubble">
+                            <div class="stat-circle">36%</div>
+                            <div class="stat-text">Compliance completion rate</div>
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <span class="category-pill">Goals & OKRs</span>
+                        <h2 class="showcase-title">Organize your network based on what matters.</h2>
+                        <p>Ensure alignment across your whole organization by making strategic objectives crystal clear. We provide the structural map for your expansion.</p>
+                        <div class="testimonial-tiny">
+                            <p>"Scale with precision. Entering our fourth week and seeing changes based on real feedback!"</p>
+                            <div class="t-author">Jeff Bezos, Supply Chain Lead</div>
+                        </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Modern Contact Card -->
+        <section id="contact" class="modern-contact">
+            <div class="container">
+                <div class="contact-card reveal-up">
+                    <div class="contact-info-side">
+                        <span class="contact-pill">Contact</span>
+                        <h2 class="editorial-title">Get in touch<br>with us!</h2>
+                        <p>Have questions or ideas? We'd love to hear from you. Reach out anytime and let's connect.</p>
+                        <a href="https://wa.me/971588495841" target="_blank" class="contact-indicator">
+                            <span class="dot"></span>
+                            <svg class="wa-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="contact-form-side">
+                        <h3 class="form-title">Contact Us</h3>
+                        <form class="white-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="Enter first name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Enter last name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="Enter email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea placeholder="Write your message here..." rows="6"></textarea>
+                            </div>
+                            <button type="submit" class="form-submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <footer class="main-footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">MED<span>PRO</span></div>
+                    <p>Healthcare Solutions for the UAE Market.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#">Setup Strategy</a>
+                    <a href="#">Quality Control</a>
+                    <a href="#">Talent Acquisition</a>
+                    <a href="#">Digital Commerce</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Dubai, United Arab Emirates</p>
+                    <p>+971 58 849 5841</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MEDPRO Healthcare Solutions. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/971588495841" class="whatsapp-float" target="_blank">
+        <img src="assets/whatsapp_icon.png" alt="WhatsApp" class="wa-icon-img">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- change the 4th  section like  , two section right and left, the right section contains the images , and it is sticky to the page while scrolling add the illution the left side is only scrolling , just replace the images without adding the scrolling effect . it shold look like out right section is stuck and left section is only scrolling -->
