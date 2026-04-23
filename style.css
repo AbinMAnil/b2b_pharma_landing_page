@@ -140,10 +140,14 @@ body {
 }
 
 .logo {
-    font-family: var(--font-ui);
-    font-weight: 800;
-    font-size: 1.25rem;
-    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .nav-links-pill {
